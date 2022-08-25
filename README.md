@@ -78,18 +78,76 @@ C) Performing Statistical Analysis:
 
 ![text](Images/important_feautres.png)
 
+We can now see that the top 7 factors are
+
+1. Average order volume
+2. Total amount spent in the last two years
+3. Total number of purchases in the last two years
+4. Amount spent on wine in the last 2 years
+5. Number of purchases made using a catalog
+6. Number of visits to company's web site in the last month
+7. Total number of purchases through website in the last two years
+
+However, we can’t tell whether each factor is positively or negatively correlated to the number of store purchases. We can use SHAP to explain it.
+
+![text](Images/SHAP.png)
+
+Finding:
+
+1. The number of store purchases increases with the higher total amount spent(Total_Mnt), higher total purchase amount(Total_num_purchase), higher AOV, and higher amount of wines purchases(MntWines).
+2. The number of store purchases decreases with more website visits(NumWebVisitsMonth), a higher number of purchases through the catalog(NumCatalogPurchases), and a higher number of purchases through websites(NumWebPurchases).
+
+`Summary:` People who mostly shop at stores tend to buy more wines, have a higher average order volume, and shop less through the internet or catalog.
+
+
 - Amount of Gold V/s Purchases
 
+![text](Images/AOV%20vs%20NumStorePurchases.png)
+
+As we can see, there is a very vague trend that says as MntGoldProds increases, NumStorePurchases also increases. Now, let’s look at the correlation test.
+
+Pearson correlation (r):  0.38326418634704296
+
+Pearson p-value:  3.4668974417790955e-79
+
+
+We got a Pearson correlation of 0.38 and a p-value of almost zero, which states that they are statistically significant and have a positive correlation. (If the p-value is > 0.05, we will fail to reject the null hypothesis, where they do not correlate.)
+
+
 - Amount of Omega 3 V/s Consumption by Couples who are Married and education status is PhD
+
+![text](Images/Married%20PhD%20vs%20the%20rest.png)
+
+This plot shows that the rest of the customers spent more on fish products as its 50th percentile is higher than the married Ph.D. group.
+
 
 D) Data Visualization:
 
 - Successfull Marketing Campaign
 
+![text](Images/Which%20marketing%20campaign%20is%20most%20successful.png)
+
+Response means the last marketing campaign, which is the most successful one. It performed nearly twice as well as the previous campaigns, except campaign 2.
+
+
 - What does an Average customer look like for his company?
+
+An average customer...
+
+* has an annual income of 52200 dollars
+* had purchased 49 days ago
+* has an AOV of 26.8 dollars
+* has spent 605 dollars
+* has purchased 20 times
+* became a customer in mid-June
+* became a customer on Thursday
+* spent most on wines(300 dollars) and then * meat products(165 dollars)
+* spent least on fruit(26 dollars) and sweet products(27 dollars)
+
 
 - Finding Underperforming Marketing Channels
 
+![text](Images/Underperforming_Channels.png)
 
 5. Forming Data-Driven Solutions:
 
