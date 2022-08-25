@@ -6,9 +6,11 @@ I’m a data analyst, and the Chief Marketing Officer has told me that previous 
 
 ## BRIEF
 
-1. Performed Data Exploration and Segmentation to study the key characteristic features of potential customers using Python.
-2. Executed Hypothesis Testing, Statistical, and Descriptive Analysis to identify sequential demand patterns and Customer Behavior.
-3. Designed interactive dashboards using Flourish to analyze the trends, give recommendations and publish the findings.
+1. Performed `Data Exploration` and `Segmentation` to study the key characteristic features of `Potential customers` using Python.
+2. Executed `Hypothesis Testing`, `Statistical Analysis`, `Anomaly Detection and Trend Analysis`, and `Feature Engineering` to identify sequential demand patterns and Customer Behavior.
+3. Calculated the top 10 Informative features using `Random Forest Feature Importance`.
+4. Detected `Successful Marketing Channels` and `Underperforming Marketing Campaigns`.
+5. Designed Interactive dashboards using Flourish to analyze the trends, give recommendations and publish the findings.
 
 ## DATA DESCRIPTION
 
@@ -50,7 +52,7 @@ The dataset is collected from kaggle - https://www.kaggle.com/datasets/jackdaoud
 
 #### 1. Marketing Analysis.ipynb - 
 
-A) Data Cleaning:
+#### A) Data Cleaning:
 
 - Renamning Columns
 
@@ -60,25 +62,25 @@ A) Data Cleaning:
 
 - DataType Conversion
 
-B) Exploratory Data Analysis (EDA):
+#### B) Exploratory Data Analysis (EDA):
 
 - Outlier Analysis (Replacing with median)
 
-- Feature Engineering
+- `Feature Engineering`
 
-- Anomaly Detection and Trend Analysis
+- `Anomaly Detection and Trend Analysis`
 
-- Correlation Analysis
+- `Correlation Analysis`
 
-C) Performing Statistical Analysis:
+#### C) Performing Statistical Analysis:
 
-- Calculating r and P-values
+- Calculating `r` and `P-values`
 
-- Feature Importance (Using Random Forest)
+- `Feature Importance (Using Random Forest)`
 
 ![text](Images/important_feautres.png)
 
-We can now see that the top 7 factors are
+We can now see that the top 7 factors are:
 
 1. Average order volume
 2. Total amount spent in the last two years
@@ -90,7 +92,7 @@ We can now see that the top 7 factors are
 
 However, we can’t tell whether each factor is positively or negatively correlated to the number of store purchases. We can use SHAP to explain it.
 
-![text](Images/SHAP.png)
+![text](Images/SHAP_1.png)
 
 Finding:
 
@@ -100,37 +102,34 @@ Finding:
 `Summary:` People who mostly shop at stores tend to buy more wines, have a higher average order volume, and shop less through the internet or catalog.
 
 
-- Amount of Gold V/s Purchases
+#### - Amount of Gold V/s Purchases
 
 ![text](Images/AOV%20vs%20NumStorePurchases.png)
 
 As we can see, there is a very vague trend that says as MntGoldProds increases, NumStorePurchases also increases. Now, let’s look at the correlation test.
 
-Pearson correlation (r):  0.38326418634704296
-
-Pearson p-value:  3.4668974417790955e-79
-
+* Pearson correlation (r):  0.38326418634704296
+* Pearson p-value:  3.4668974417790955e-79
 
 We got a Pearson correlation of 0.38 and a p-value of almost zero, which states that they are statistically significant and have a positive correlation. (If the p-value is > 0.05, we will fail to reject the null hypothesis, where they do not correlate.)
 
 
-- Amount of Omega 3 V/s Consumption by Couples who are Married and education status is PhD
+#### - Amount of Omega 3 V/s Consumption by Couples who are Married and education status is PhD
 
 ![text](Images/Married%20PhD%20vs%20the%20rest.png)
 
 This plot shows that the rest of the customers spent more on fish products as its 50th percentile is higher than the married Ph.D. group.
 
 
-D) Data Visualization:
+#### D) Data Visualization:
 
-- Successfull Marketing Campaign
+#### - `Successfull Marketing Campaign`
 
 ![text](Images/Which%20marketing%20campaign%20is%20most%20successful.png)
 
 Response means the last marketing campaign, which is the most successful one. It performed nearly twice as well as the previous campaigns, except campaign 2.
 
-
-- What does an Average customer look like for his company?
+#### - What does an `Average customer look like for his company?`
 
 An average customer...
 
@@ -145,16 +144,14 @@ An average customer...
 * spent least on fruit(26 dollars) and sweet products(27 dollars)
 
 
-- Finding Underperforming Marketing Channels
+#### - Finding `Underperforming Marketing Channels`
 
 ![text](Images/Underperforming_Channels.png)
 
-5. Forming Data-Driven Solutions:
-
-
-## Findings:
+## CONCLUSION
 
 Patterns:
+
 1. High-Income People
 — tend to spend more and purchase more.
 — tend to visit the company’s website less frequently than other people.
@@ -171,7 +168,10 @@ Patterns:
 
 
 Anomalies:
-1. Intuitively, I’d think the more complaints a customer has, the less they may spend on our store, but the number of complaints in the last two years has almost no correlation with the total amount spent in the last two years. => After further investigating the data, I found that it is because we only have 20 customers who complained in the last two years, but we have 2200 customers in total. So, because of the imbalanced ratio, they don’t correlate. The customer service department in the company has done a wonderful job in the last two years.
+
+1. Intuitively, I’d think the more complaints a customer has, the less they may spend on our store, but the number of complaints in the last two years has almost no correlation with the total amount spent in the last two years.
+
+After further investigating the data, I found that it is because we only have 20 customers who complained in the last two years, but we have 2200 customers in total. So, because of the imbalanced ratio, they don’t correlate. The customer service department in the company has done a wonderful job in the last two years.
 
 
 https://towardsdatascience.com/data-science-project-marketing-analytics-data-driven-solutions-72d050084642
