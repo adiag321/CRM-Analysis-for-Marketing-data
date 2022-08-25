@@ -1,10 +1,14 @@
-# CRM Analysis for Marketing data
+# <p align = 'center'>CRM Analysis for Marketing data</p>
+
+## PROBLEM STATEMENT
 
 I’m a data analyst, and the Chief Marketing Officer has told me that previous marketing campaigns have not been as effective as they were expected to be. I need to analyze the data set to understand this problem and propose data-driven solutions.
 
 ## DATA DESCRIPTION
 
-The dataset for this project is provided by Dr. Omar Romero-Hernandez. It is licensed as CC0: Public Domain, which states, “You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission”
+The dataset for this project is provided by Dr. Omar Romero-Hernandez. It is licensed as CC0: Public Domain.
+
+The dataset is collected from kaggle - https://www.kaggle.com/datasets/jackdaoud/marketing-data?taskId=2986
 
 1. ID: Customer’s unique identifier
 2. Year_Birth: Customer’s birth year
@@ -36,33 +40,49 @@ The dataset for this project is provided by Dr. Omar Romero-Hernandez. It is lic
 28. Country: Customer’s location
 
 
-The dataset is collected from kaggle - https://www.kaggle.com/datasets/jackdaoud/marketing-data?taskId=2986
+## METHODOLOGY
 
-## METHODS
+1. Marketing Analysis - 
 
-1. Data Cleaning:
+A) Data Cleaning:
 
-- There is a space in front of the income’s column name
+- Renamning Columns
 
-- There are dollar signs is the values of Income column
+- String Manipulations
 
-- The “Income” column has 23 missing values
+- Missing values (Imputing with Median)
 
-- Income’s type is string
+- DataType Conversion
 
-- Dt_Customer’s type is string
+B) Exploratory Data Analysis (EDA):
 
-2. Exploratory Data Analysis (EDA)
+- Outlier Analysis (Replacing with median)
 
-- Are there any outliers? How will you wrangle/handle them?
+- Feature Engineering
 
-- Are there any useful variables that you can engineer with the given data?
+- Anomaly Detection and Trend Analysis
 
-- Do you notice any patterns or anomalies in the data? Can you plot them?
+- Correlation Analysis
+
+C) Performing Statistical Analysis
+
+- Calculating r and P-values
+
+- Feature Importance (Using Random Forest)
+
+- Amount of Gold V/s Purchases
+
+- Amount of Omega 3 V/s Consumption by Couples who are Married and education status is PhD
+
+D) Data Visualization and Further Analysis
+
+- Successfull Marketing Campaign
+
+- What does an Average customer look like for his company?
+
+- Finding Underperforming Marketing Channels
 
 
-3. Performing Statistical Analysis
-4. Data Visualization and Further Analysis
 5. Forming Data-Driven Solutions
 
 
