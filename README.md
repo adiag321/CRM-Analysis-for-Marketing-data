@@ -4,6 +4,12 @@
 
 I’m a data analyst, and the Chief Marketing Officer has told me that previous marketing campaigns have not been as effective as they were expected to be. I need to analyze the data set to understand this problem and propose data-driven solutions.
 
+## BRIEF
+
+1. Performed Data Exploration and Segmentation to study the key characteristic features of potential customers using Python.
+2. Executed Hypothesis Testing, Statistical, and Descriptive Analysis to identify sequential demand patterns and Customer Behavior.
+3. Designed interactive dashboards using Flourish to analyze the trends, give recommendations and publish the findings.
+
 ## DATA DESCRIPTION
 
 The dataset for this project is provided by Dr. Omar Romero-Hernandez. It is licensed as CC0: Public Domain.
@@ -42,7 +48,7 @@ The dataset is collected from kaggle - https://www.kaggle.com/datasets/jackdaoud
 
 ## METHODOLOGY
 
-1. Marketing Analysis - 
+#### 1. Marketing Analysis.ipynb - 
 
 A) Data Cleaning:
 
@@ -64,17 +70,19 @@ B) Exploratory Data Analysis (EDA):
 
 - Correlation Analysis
 
-C) Performing Statistical Analysis
+C) Performing Statistical Analysis:
 
 - Calculating r and P-values
 
 - Feature Importance (Using Random Forest)
 
+![text](Images/important_feautres.png)
+
 - Amount of Gold V/s Purchases
 
 - Amount of Omega 3 V/s Consumption by Couples who are Married and education status is PhD
 
-D) Data Visualization and Further Analysis
+D) Data Visualization:
 
 - Successfull Marketing Campaign
 
@@ -83,7 +91,7 @@ D) Data Visualization and Further Analysis
 - Finding Underperforming Marketing Channels
 
 
-5. Forming Data-Driven Solutions
+5. Forming Data-Driven Solutions:
 
 
 ## Findings:
