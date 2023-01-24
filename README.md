@@ -10,7 +10,7 @@ I’m a data analyst, and the Chief Marketing Officer has told me that previous 
 2. Executed `Hypothesis Testing`, `Statistical Analysis`, `Anomaly Detection and Trend Analysis`, and `Feature Engineering` to identify sequential demand patterns and Customer Behavior.
 3. Calculated the top 10 Informative features using `Random Forest Feature Importance`.
 4. Detected `Successful Marketing Channels` and `Underperforming Marketing Campaigns`.
-5. Designed Interactive dashboards using Flourish to analyze the trends, give recommendations and publish the findings.
+5. Designed Interactive dashboards using `Flourish` to analyze the trends, give recommendations and publish the findings.
 
 ## DATA DESCRIPTION
 
