@@ -148,9 +148,51 @@ An average customer...
 
 ![text](Images/Underperforming_Channels.png)
 
+
+## Classification Model - 
+
+1. Logistic Regression - 
+
+Fitting 10 folds for each of 20 candidates, totalling 200 fits <br>
+{'C': 1.1, 'penalty': 'l1', 'solver': 'liblinear'} <br>
+Logistic Regression Train score: 87.5 <br>
+Logistic Regression Cross validation score: 89.05527915975678 <br>
+Testing Accuracy: 85.71428571428571 <br>
+
+2. Support Vector Machine - 
+
+Fitting 10 folds for each of 60 candidates, totalling 600 fits <br>
+{'C': 0.8, 'degree': 3, 'kernel': 'linear'} <br>
+Support Vecktor Classification Cross validation score: 88.98231066887783 <br>
+Testing Accuracy: 86.49553571428571 <br>
+
+3. XGBoost - 
+
+Fitting 10 folds for each of 24 candidates, totalling 240 fits <br>
+{'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 50} <br>
+XGB Classifier Cros validation score: 89.2072968490879 <br>
+Testing Accuracy: 86.49553571428571
+
+4. Random Forest Regressor - 
+
+Fitting 5 folds for each of 36 candidates, totalling 180 fits <br>
+GridSearchCV(cv=5, estimator=RandomForestClassifier(random_state=5), <br>
+             param_grid={'criterion': ['gini'], 'max_depth': [None, 3, 5, 8], <br>
+                         'max_features': ['auto'], <br>
+                         'min_samples_split': [2, 3, 4], <br>
+                         'n_estimators': [50, 100, 200]}, <br>
+             verbose=1) <br>
+Testing Accuracy: 0.8616071428571429 <br>
+
+## FEATURE IMPORTANCE
+
+We have computated feature importance using Recurssive Feature Elimination method (along with the best params selected for random forest regressor).
+
+![text](Images/Feature_Importance_IFood_CRM.png)
+
 ## CONCLUSION
 
-Patterns:
+`Patterns:`
 
 1. High-Income People
 — tend to spend more and purchase more.
@@ -167,11 +209,9 @@ Patterns:
 — tend not to visit the company’s website.
 
 
-Anomalies:
+`Anomalies:`
 
 1. Intuitively, I’d think the more complaints a customer has, the less they may spend on our store, but the number of complaints in the last two years has almost no correlation with the total amount spent in the last two years.
 
 After further investigating the data, I found that it is because we only have 20 customers who complained in the last two years, but we have 2200 customers in total. So, because of the imbalanced ratio, they don’t correlate. The customer service department in the company has done a wonderful job in the last two years.
 
-
-https://towardsdatascience.com/data-science-project-marketing-analytics-data-driven-solutions-72d050084642
