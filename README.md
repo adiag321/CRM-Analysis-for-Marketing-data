@@ -157,21 +157,21 @@ Fitting 10 folds for each of 20 candidates, totalling 200 fits <br>
 {'C': 1.1, 'penalty': 'l1', 'solver': 'liblinear'} <br>
 Logistic Regression Train score: 87.5 <br>
 Logistic Regression Cross validation score: 89.05527915975678 <br>
-Testing Accuracy: 85.71428571428571 <br>
+`Testing Accuracy: 85.71428571428571 `<br>
 
 2. Support Vector Machine - 
 
 Fitting 10 folds for each of 60 candidates, totalling 600 fits <br>
 {'C': 0.8, 'degree': 3, 'kernel': 'linear'} <br>
 Support Vecktor Classification Cross validation score: 88.98231066887783 <br>
-Testing Accuracy: 86.49553571428571 <br>
+`Testing Accuracy: 86.49553571428571`<br>
 
 3. XGBoost - 
 
 Fitting 10 folds for each of 24 candidates, totalling 240 fits <br>
 {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 50} <br>
 XGB Classifier Cros validation score: 89.2072968490879 <br>
-Testing Accuracy: 86.49553571428571
+`Testing Accuracy: 86.49553571428571` <br>
 
 4. Random Forest Regressor - 
 
@@ -182,7 +182,7 @@ GridSearchCV(cv=5, estimator=RandomForestClassifier(random_state=5), <br>
                          'min_samples_split': [2, 3, 4], <br>
                          'n_estimators': [50, 100, 200]}, <br>
              verbose=1) <br>
-Testing Accuracy: 0.8616071428571429 <br>
+`Testing Accuracy: 0.8616071428571429` <br>
 
 ## FEATURE IMPORTANCE
 
