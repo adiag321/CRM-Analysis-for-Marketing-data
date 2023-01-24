@@ -149,7 +149,7 @@ An average customer...
 ![text](Images/Underperforming_Channels.png)
 
 
-## Classification Model - 
+## CLASSIFICATION ALGORITHMS 
 
 1. Logistic Regression - 
 
