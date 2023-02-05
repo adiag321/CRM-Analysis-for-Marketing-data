@@ -1,4 +1,4 @@
-# <p align = 'center'>CRM Analysis for Marketing data</p>
+# <p align = 'center'>Customer Relationship Management (CRM) Analysis for Marketing data</p>
 
 ## PROBLEM STATEMENT
 
