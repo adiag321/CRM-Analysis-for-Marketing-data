@@ -14,9 +14,7 @@ I’m a Data Scientist, and the Chief Marketing Officer has told me that previou
 
 ## DATA DESCRIPTION
 
-The dataset for this project is provided by Dr. Omar Romero-Hernandez. It is licensed as CC0: Public Domain.
-
-The dataset is collected from kaggle - https://www.kaggle.com/datasets/jackdaoud/marketing-data?taskId=2986
+The dataset for this project is provided by Dr. Omar Romero-Hernandez. It is licensed as CC0: Public Domain. The dataset is collected from kaggle - https://www.kaggle.com/datasets/jackdaoud/marketing-data?taskId=2986
 
 1. ID: Customer’s unique identifier
 2. Year_Birth: Customer’s birth year
