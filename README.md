@@ -2,7 +2,7 @@
 
 ## PROBLEM STATEMENT
 
-I’m a data analyst, and the Chief Marketing Officer has told me that previous marketing campaigns have not been as effective as they were expected to be. I need to analyze the data set to understand this problem and propose data-driven solutions.
+I’m a Data Scientist, and the Chief Marketing Officer has told me that previous marketing campaigns have not been as effective as they were expected to be. I need to analyze the data set to understand this problem and propose data-driven solutions.
 
 ## BRIEF
 
@@ -47,6 +47,94 @@ The dataset is collected from kaggle - https://www.kaggle.com/datasets/jackdaoud
 27. Complain: 1 if a customer complained in the last 2 years, 0 otherwise
 28. Country: Customer’s location
 
+## FEATURE ENGINEERING
+#### Customer Demographics Features
+
+1. `Age`
+**Definition:**  
+`Age = Current_Year - Year_Birth`  
+**Example:**  
+2024 - 1970 = **54**
+
+2. `Is_Parent`
+**Definition:**  
+`Is_Parent = 1 if (Kidhome + Teenhome) > 0 else 0`
+
+3. `Total_Kids`
+**Definition:**  
+`Total_Kids = Kidhome + Teenhome`
+
+4. `Marital_Status_Simplified`
+**Definition:**  
+Group marital status into broader categories:
+- `"Married"` or `"Together"` → **Partnered**  
+- All others (e.g., `"Single"`, `"Divorced"`, `"Widow"`, etc.) → **Single**
+
+#### Purchase Behavior Features
+
+1. `Total_Spent`
+**Definition:**  
+`Total_Spent = MntWines + MntFruits + MntMeatProducts + MntFishProducts + MntSweetProducts + MntGoldProds`
+
+2. `Spending_per_Category`
+**Definition:**  
+Share of spending per category (example for Wine and Meat):  
+- `Wine_Share = MntWines / Total_Spent`  
+- `Meat_Share = MntMeatProducts / Total_Spent`  
+*(Apply similarly for other product categories)*
+
+3. `Average_Spend_per_Purchase`
+**Definition:**  
+`Avg_Spend_per_Purchase = Total_Spent / (NumDealsPurchases + NumWebPurchases + NumCatalogPurchases + NumStorePurchases)`
+
+4. `Deal_Dependency`
+**Definition:**  
+`Deal_Rate = NumDealsPurchases / Total_Purchases`
+
+#### Channel Engagement Features
+
+1. `Total_Purchases`
+**Definition:**  
+`Total_Purchases = NumWebPurchases + NumCatalogPurchases + NumStorePurchases`
+
+2. `Web_Engagement`
+**Definitions:**  
+- `Web_Purchase_Share = NumWebPurchases / Total_Purchases`  
+- `Web_Visit_to_Purchase_Ratio = NumWebVisitsMonth / (NumWebPurchases + 1)`
+
+3. `Is_Online_Buyer`
+**Definition:**  
+`Is_Online_Buyer = 1 if NumWebPurchases > NumStorePurchases else 0`
+
+#### Temporal Features
+
+1. `Customer_Since_Days`
+**Definition:**  
+`Customer_Since_Days = Today - Dt_Customer`  
+*(Convert `Dt_Customer` to datetime and subtract from current date)*
+
+2. `Recent_Activity`
+**Definition:**  
+`Is_Active = 1 if Recency < 30 else 0`
+
+3. `Customer_Lifetime_Spent_per_Day`
+**Definition:**  
+`Lifetime_Spend_per_Day = Total_Spent / Customer_Since_Days`
+
+#### Campaign Response Features
+
+1. `Total_Accepted_Campaigns`
+**Definition:**  
+Sum of all campaign columns:  
+`Total_Accepted_Campaigns = AcceptedCmp1 + AcceptedCmp2 + AcceptedCmp3 + AcceptedCmp4 + AcceptedCmp5`
+
+2. `Campaign_Response_Rate`
+**Definition:**  
+`Campaign_Response_Rate = Total_Accepted_Campaigns / 5`
+
+3. `Is_Responder`
+**Definition:**  
+`Is_Responder = 1 if Total_Accepted_Campaigns > 0 or Response == 1 else 0`
 
 ## METHODOLOGY
 
