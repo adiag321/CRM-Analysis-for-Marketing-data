@@ -281,7 +281,7 @@ We have computated feature importance using Recurssive Feature Elimination metho
 
 To streamline and standardize the use of engineered features across different machine learning workflows, a Feature Store was implemented using `Feast`, an open-source feature store for ML.
 
-#### How It Was Implemented:
+#### *How It Was Implemented:*
 1. Data Preparation:
 * Created event_timestamp and ensured each record had a unique Customer ID.
 * Split the dataset into predictors and target variables.
@@ -295,8 +295,7 @@ To streamline and standardize the use of engineered features across different ma
 * Used feast apply to register features with the store.
 * Queried historical features for training using get_historical_features.
 
-#### Advantages of using Feature Store:
-Advantages of Using a Feature Store
+#### *Advantages of using Feature Store:*
 * Consistency: Ensures the same feature definitions are used during training and inference, reducing data leakage and model drift.
 * Reusability: Centralizes features, allowing them to be reused across different models and teams.
 * Scalability: Facilitates deployment in production pipelines with minimal friction.
