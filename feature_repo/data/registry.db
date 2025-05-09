@@ -1,0 +1,53 @@
+
+<
+
+customer"IDJfeature_repo
+³ùÀ°Üœµ³ùÀ°Üœµ
+C
+#
+__dummy"
+__dummy_idJfeature_repo
+³ùÀ°Üœµ³ùÀ°Üœµ1"$bb32efd5-4d59-4a46-8d0d-4c848a1bc57c*³ùÀ ÑÙµ2á
+À
+predictors_df_feature_viewfeature_repocustomer"
+Age"
+	Is_Parent"
+
+Total_Kids"
+Marital_Status_Simplified"
+Total_Spent"
+MntWines_Share"
+MntFruits_Share"
+MntMeatProducts_Share"
+MntFishProducts_Share"
+MntSweetProducts_Share"
+MntGoldProds_Share"
+Total_Purchases"
+Avg_Spend_per_Purchase"
+	Deal_Rate"
+Web_Purchase_Share"
+Web_Visit_to_Purchase_Ratio"
+Is_Online_Buyer"
+Customer_Since_Days"
+	Is_Active"
+Lifetime_Spend_per_Day"
+Total_Accepted_Campaigns"
+Campaign_Response_Rate2€Æ
+:‚event_timestampZdata/predictors_df.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢data/predictors_df.parquet@b
+ID
+³ùÀ°Üœµ³ùÀ°Üœµ2ë
+Ê
+target_df_feature_viewfeature_repocustomer"
+Response2€Æ
+:zevent_timestampZdata/target_df.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢data/target_df.parquet@b
+ID
+³ùÀ ÑÙµ³ùÀ ÑÙµRØ
+ë
+,feast.infra.online_stores.sqlite.SqliteTable"º
+ŽD:\OneDrive - Northeastern University\Jupyter Notebook\Data Science Projects\CRM-Analysis-for-Marketing-data\feature_repo\data\online_store.db'feature_repo_predictors_df_feature_view
+ç
+,feast.infra.online_stores.sqlite.SqliteTable"¶
+ŽD:\OneDrive - Northeastern University\Jupyter Notebook\Data Science Projects\CRM-Analysis-for-Marketing-data\feature_repo\data\online_store.db#feature_repo_target_df_feature_viewb‘event_timestampZdata/predictors_df.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢data/predictors_df.parquetªfeature_repob‰event_timestampZdata/target_df.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢data/target_df.parquetªfeature_repoŠ.
+
+feature_repo
+³ùÀ ·‡õ³ùÀ ·‡õ
