@@ -11,6 +11,7 @@ I’m a Data Scientist, and the Chief Marketing Officer has told me that previou
 3. Calculated the top 10 Informative features using `Random Forest Feature Importance`.
 4. Detected `Successful Marketing Channels` and `Underperforming Marketing Campaigns`.
 5. Designed Interactive dashboards using `Flourish` to analyze the trends, give recommendations and publish the findings.
+6. Implemented a `Feature Store` to centralize, standardize, and reuse curated customer features across multiple campaigns, enabling consistent and efficient deployment of ML models.
 
 ## DATA DESCRIPTION
 
@@ -275,6 +276,30 @@ GridSearchCV(cv=5, estimator=RandomForestClassifier(random_state=5), <br>
 We have computated feature importance using Recurssive Feature Elimination method (along with the best params selected for random forest regressor).
 
 ![text](Images/Feature_Importance_IFood_CRM.png)
+
+## FEATURE STORE IMPLEMENTATION
+
+To streamline and standardize the use of engineered features across different machine learning workflows, a Feature Store was implemented using `Feast`, an open-source feature store for ML.
+
+#### How It Was Implemented:
+1. Data Preparation:
+* Created event_timestamp and ensured each record had a unique Customer ID.
+* Split the dataset into predictors and target variables.
+* Saved both datasets in Parquet format for optimized storage and access.
+
+2. Feast Initialization:
+* Initialized a Feast repository using feast init.
+* Defined feature views in Python to represent customer attributes and campaign responses.
+
+3. Apply and Fetch Features:
+* Used feast apply to register features with the store.
+* Queried historical features for training using get_historical_features.
+
+#### Advantages of using Feature Store:
+Advantages of Using a Feature Store
+* Consistency: Ensures the same feature definitions are used during training and inference, reducing data leakage and model drift.
+* Reusability: Centralizes features, allowing them to be reused across different models and teams.
+* Scalability: Facilitates deployment in production pipelines with minimal friction.
 
 ## CONCLUSION
 
